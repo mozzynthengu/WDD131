@@ -3,13 +3,13 @@
 // Track number of participants
 let participantCount = 1;
 
-// Get references to buttons and form
+// lets Get references to buttons and form
 const addButton = document.getElementById("add");
 const form = document.querySelector("form");
 const summarySection = document.getElementById("summary");
 
 // ------------------------------
-// Function to create participant HTML
+// Here is Function to create participant HTML
 // ------------------------------
 function participantTemplate(count) {
   return `
@@ -54,7 +54,7 @@ function participantTemplate(count) {
 }
 
 // ------------------------------
-// Add Participant Button Functionality
+// lets Add Participant Button Functionality
 // ------------------------------
 addButton.addEventListener("click", () => {
   participantCount++; // Increase participant count
@@ -65,12 +65,12 @@ addButton.addEventListener("click", () => {
 });
 
 // ------------------------------
-// Calculate Total Fees
+// function to Calculate Total Fees
 // ------------------------------
 function totalFees() {
-  // Select all fee inputs (ids starting with "fee")
+  //
   let feeElements = document.querySelectorAll("[id^=fee]");
-  feeElements = [...feeElements]; // convert NodeList to Array
+  feeElements = [...feeElements];
 
   // Sum all fees
   let total = 0;
@@ -85,7 +85,7 @@ function totalFees() {
 }
 
 // ------------------------------
-// Success Message Template
+// Success Message  after submit 
 // ------------------------------
 function successTemplate(info) {
   return `
@@ -95,10 +95,10 @@ function successTemplate(info) {
 }
 
 // ------------------------------
-// Submit Form Functionality
+// adding Submit Form Functionality
 // ------------------------------
 form.addEventListener("submit", (event) => {
-  event.preventDefault(); // Prevent page reload
+  event.preventDefault(); //thiss will  Prevent page reload
 
   // Get adult name
   const adultName = document.getElementById("adult_name").value;
